@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
+}
+
+header {
+  background-color: #87a2ff;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+section {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #87a2ff;
+  padding-bottom: 5px;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="checkbox"] {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+form input[type="checkbox"] {
+  width: auto;
+}
+
+form button {
+  background-color: #87a2ff;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button#searchSubmit {
+  margin-top: 20px;
+}
+
+form button:hover {
+  background-color: #08c2ff;
+}
+
+#incompleteBookList,
+#completeBookList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+[data-testid="bookItem"] {
+  background-color: #f9f9f9;
+  border-left: 5px solid #87a2ff;
+  padding: 15px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+[data-testid="bookItem"] h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+[data-testid="bookItem"] p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+[data-testid="bookItem"] div {
+  display: flex;
+  gap: 10px;
+}
+
+[data-testid="bookItem"] button {
+  background-color: #87a2ff;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+[data-testid="bookItem"] button:hover {
+  background-color: #08c2ff;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 0 10px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  form input[type="text"],
+  form input[type="number"] {
+    padding: 8px;
+  }
+
+  form button {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  [data-testid="bookItem"] h3 {
+    font-size: 1.1rem;
+  }
+
+  [data-testid="bookItem"] p {
+    font-size: 0.9rem;
+  }
+
+  [data-testid="bookItem"] button {
+    padding: 6px 10px;
+  }
+}
